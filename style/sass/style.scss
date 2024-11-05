@@ -1,12 +1,15 @@
-:root{
-    --default-color: #3C3B3D;
-    --white-color: #FFFFFF;
-    --white-light-color: #FBF9F6;
-    --black-color: #0A0A0A;
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap");
+
+:root {
+    --default-color: #3c3b3d;
+    --white-color: #ffffff;
+    --white-light-color: #fbf9f6;
+    --black-color: #0a0a0a;
     --grey-color: #757478;
-    --second-color: #0A6647;
-    --second-dark-color: #124E3B;
-    --accent-color: #F2CDCE;
+    --second-color: #0a6647;
+    --second-color-hover: #0d805a;
+    --second-dark-color: #124e3b;
+    --accent-color: #f2cdce;
 }
 
 @mixin reset-button {
@@ -51,18 +54,35 @@
     margin: 0;
 }
 
+body {
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    color: var(--default-color);
+    font-style: normal;
+}
+
 ul {
     list-style-type: none;
     padding: 0;
 }
 
 button {
+    font-family: inherit;
+    font-weight: inherit;
     cursor: pointer;
 }
 
 a {
+    font-family: inherit;
+    font-weight: inherit;
     text-decoration: none;
     color: inherit;
+}
+
+a,
+button {
+    transition-duration: 300ms;
+    transition-timing-function: ease-in-out;
 }
 
 .section {
@@ -72,5 +92,113 @@ a {
 .container {
     max-width: 1280px;
     margin-inline: auto;
-    padding-inline: 120px;
+}
+
+.button {
+    @include reset-button;
+
+    &--green {
+        color: var(--white-color);
+        background-color: var(--second-color);
+
+        @include hover {
+            background-color: var(--second-color-hover);
+        }
+    }
+
+    &--empty {
+        color: var(--second-color);
+
+        @include hover {
+            color: var(--white-color);
+            background-color: var(--second-color-hover);
+        }
+    }
+}
+
+.header {
+    padding-block: 0;
+
+    &__wrapper {
+        display: flex;
+        justify-content: space-evenly;
+        height: 72px;
+
+        @include mobile {
+            flex-direction: column;
+            height: fit-content;
+            row-gap: 20px;
+        }
+    }
+
+    &__logo {
+        &-link {
+            align-self: center;
+        }
+    }
+
+    &__list {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        column-gap: 32px;
+        margin-right: auto;
+        margin-left: 62px;
+
+        @include mobile {
+            flex-direction: column;
+            margin-left: auto;
+            row-gap: 16px;
+        }
+    }
+
+    &__link {
+        font-size: 15px;
+        font-weight: inherit;
+        position: relative;
+
+        @include hover {
+            color: var(--second-color-hover);
+
+            &.drop-down-triangle::after {
+                border-top-color: var(--second-color-hover);
+            }
+        }
+
+        &.drop-down-triangle::after {
+            content: "";
+            position: absolute;
+            top: 70%;
+            left: 105%;
+            width: 0;
+            height: 0;
+            translate: 0 -70%;
+            border-left: 11px solid transparent; /* Ліва сторона */
+            border-right: 11px solid transparent; /* Права сторона */
+            border-top: 11px solid var(--black-color); /* Колір і розмір трикутника */
+            transition: border 300ms ease-in-out;
+        }
+    }
+
+    &__buttons-wrapper {
+        display: flex;
+        column-gap: 24px;
+
+        @include mobile {
+            flex-direction: column;
+            row-gap: 10px;
+        }
+    }
+
+    &__button {
+        padding-inline: 18px;
+        border-radius: 4px;
+        margin-block: 14px;
+
+        @include mobile {
+            align-self: center;
+            margin-block: 0px;
+            padding-block: 10px;
+        }
+    }
 }
