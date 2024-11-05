@@ -217,9 +217,9 @@ button {
             width: 0;
             height: 0;
             translate: 0 -70%;
-            border-left: 11px solid transparent; /* Ліва сторона */
-            border-right: 11px solid transparent; /* Права сторона */
-            border-top: 11px solid var(--black-color); /* Колір і розмір трикутника */
+            border-left: 11px solid transparent; 
+            border-right: 11px solid transparent; 
+            border-top: 11px solid var(--black-color);
             transition: border 300ms ease-in-out;
         }
     }
@@ -248,7 +248,7 @@ button {
 }
 
 .hero {
-    background-image: url("/images/hero/hero-background.jpg");
+    background-image: url("../../images/hero/hero-background.jpg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
