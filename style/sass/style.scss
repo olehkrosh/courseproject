@@ -10,6 +10,7 @@
     --second-color-hover: #0d805a;
     --second-dark-color: #124e3b;
     --accent-color: #f2cdce;
+    --accent-color-hover: #ecb5b7;
 }
 
 @mixin reset-button {
@@ -57,6 +58,7 @@
 body {
     font-family: "Roboto", sans-serif;
     font-weight: 400;
+    font-size: 16px;
     color: var(--default-color);
     font-style: normal;
 }
@@ -106,6 +108,16 @@ button {
         }
     }
 
+    &--red {
+        color: var(--black-color);
+        background-color: var(--accent-color);
+        border-radius: 4px;
+
+        @include hover {
+            background-color: var(--accent-color-hover);
+        }
+    }
+
     &--empty {
         color: var(--second-color);
 
@@ -114,10 +126,42 @@ button {
             background-color: var(--second-color-hover);
         }
     }
+
+    &__text-wrapper {
+        position: relative;
+        display: inline;
+        color: inherit;
+    }
+
+    &__arrow-right {
+        &::before,
+        &::after {
+            content: "";
+            position: absolute;
+            width: 11.5px;
+            height: 2px;
+            background-color: var(--black-color);
+        }
+
+        &::before {
+            transform: rotate(45deg);
+            right: -15%;
+            top: 5.5px;
+        }
+
+        &::after {
+            transform: rotate(-45deg);
+            right: -15%;
+            bottom: 5.5px;
+        }
+    }
 }
 
 .header {
     padding-block: 0;
+    @include mobile {
+        padding-bottom: 15px;
+    }
 
     &__wrapper {
         display: flex;
@@ -200,5 +244,77 @@ button {
             margin-block: 0px;
             padding-block: 10px;
         }
+    }
+}
+
+.hero {
+    background-image: url("/images/hero/hero-background.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding-block: 167px;
+
+    @include mobile {
+        background-position: 65%;
+    }
+
+    &__wrapper {
+        display: flex;
+
+        @include mobile {
+            flex-direction: column;
+        }
+    }
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        margin-left: 125px;
+        max-width: 470px;
+        padding: 40px 48px;
+        background-color: var(--white-color);
+        border-radius: 8px;
+
+        @include mobile {
+            margin-left: 0px;
+            padding: 20px 24px;
+            max-width: 250px;
+            align-self: center;
+        }
+    }
+
+    &__title {
+        font-size: 40px;
+        color: var(--second-dark-color);
+        margin-bottom: 22px;
+
+        @include mobile {
+            font-size: 24px;
+        }
+    }
+
+    &__description {
+        margin-bottom: 73px;
+
+        @include mobile {
+            font-size: 14px;
+        }
+    }
+
+    &__button {
+        color: var(--black-color);
+    }
+
+    &__fullname {
+        align-self: flex-end;
+        margin-left: auto;
+        margin-right: auto;
+        position: relative;
+        top: 70px;
+    }
+
+    &__firstname,
+    &__lastname {
+        color: var(--white-color);
     }
 }
