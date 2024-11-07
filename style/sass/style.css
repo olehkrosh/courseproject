@@ -49,7 +49,7 @@ button {
 }
 
 .section {
-  padding-block: 80px;
+  padding-block: 150px;
 }
 
 .container {
@@ -266,6 +266,8 @@ button {
   background-position: center;
   background-repeat: no-repeat;
   padding-block: 167px;
+  position: relative;
+  z-index: 1;
 }
 @media (max-width: 767px) {
   .hero {
@@ -327,4 +329,64 @@ button {
 }
 .hero__firstname, .hero__lastname {
   color: var(--white-color);
+}
+
+.job {
+  background-color: var(--white-light-color);
+  position: relative;
+  z-index: 0;
+}
+.job__title {
+  font-size: 44px;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 29px;
+}
+.job__description {
+  font-size: 23px;
+  text-align: center;
+  margin-inline: auto;
+  max-width: 771px;
+  margin-bottom: 44px;
+}
+.job__list {
+  display: flex;
+  -moz-column-gap: 66px;
+       column-gap: 66px;
+}
+@media (max-width: 767px) {
+  .job__list {
+    flex-direction: column;
+  }
+}
+@media (max-width: 1023px) {
+  .job__list {
+    flex-wrap: wrap;
+    justify-content: center;
+    row-gap: 40px;
+  }
+}
+.job__item {
+  display: flex;
+  flex-direction: column;
+}
+@media (max-width: 1023px) {
+  .job__item {
+    flex: 0 0 40%;
+  }
+}
+.job__item-image {
+  width: 100%;
+  height: 100%;
+  margin-bottom: 53px;
+}
+.job__item-title {
+  font-size: 20px;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 17px;
+}
+.job__item-description {
+  font-size: 15px;
+  text-align: center;
 }/*# sourceMappingURL=style.css.map */

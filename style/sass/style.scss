@@ -88,7 +88,7 @@ button {
 }
 
 .section {
-    padding-block: 80px;
+    padding-block: 150px;
 }
 
 .container {
@@ -230,8 +230,8 @@ button {
             content: "";
             position: relative;
             top: 15px;
-            border-left: 11px solid transparent; 
-            border-right: 11px solid transparent; 
+            border-left: 11px solid transparent;
+            border-right: 11px solid transparent;
             border-top: 11px solid var(--black-color);
             transition: border 300ms ease-in-out;
         }
@@ -280,6 +280,8 @@ button {
     background-position: center;
     background-repeat: no-repeat;
     padding-block: 167px;
+    position: relative;
+    z-index: 1;
 
     @include mobile {
         background-position: 65%;
@@ -343,5 +345,71 @@ button {
     &__firstname,
     &__lastname {
         color: var(--white-color);
+    }
+}
+
+.job {
+    background-color: var(--white-light-color);
+    position: relative;
+    z-index: 0;
+
+    &__wrapper {
+    }
+
+    &__title {
+        font-size: 44px;
+        font-weight: 700;
+        text-align: center;
+        margin-bottom: 29px;
+    }
+
+    &__description {
+        font-size: 23px;
+        text-align: center;
+        margin-inline: auto;
+        max-width: 771px;
+        margin-bottom: 44px;
+    }
+
+    &__list {
+        display: flex;
+        column-gap: 66px;
+
+        @include mobile {
+            flex-direction: column;
+        }
+
+        @include tablet {
+            flex-wrap: wrap;
+            justify-content: center;
+            row-gap: 40px;
+        }
+    }
+
+    &__item {
+        display: flex;
+        flex-direction: column;
+
+        @include tablet {
+            flex: 0 0 40%;
+        }
+
+        &-image {
+            width: 100%;
+            height: 100%;
+            margin-bottom: 53px;
+        }
+
+        &-title {
+            font-size: 20px;
+            font-weight: 700;
+            text-align: center;
+            margin-bottom: 17px;
+        }
+
+        &-description {
+            font-size: 15px;
+            text-align: center;
+        }
     }
 }
