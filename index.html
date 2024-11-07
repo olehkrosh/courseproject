@@ -6,6 +6,10 @@
     <title>Vivan</title>
     <link rel="stylesheet" href="./style/css/modern-normalize.css" />
     <link rel="stylesheet" href="./style/sass/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
   </head>
   <body>
     <header class="header section">
@@ -149,8 +153,119 @@
           </div>
         </div>
       </section>
+
+      <section class="locations section">
+        <div class="locations__wrapper container">
+          <h1 class="locations__title">
+            Jobs for every healthcare professional
+          </h1>
+          <div class="locations__toggle-wrapper">
+            <button
+              class="locations__toggle button button--green"
+              type="button"
+            >
+              Travel
+            </button>
+            <button class="locations__toggle button" type="button">
+              Permanent
+            </button>
+          </div>
+          <div class="locations__swiper swiper">
+            <div class="locations__swiper-wrapper swiper-wrapper">
+              <div class="locations__swiper-slide swiper-slide">
+                <img
+                  class="locations__swiper-slide-image"
+                  src="./images/locations/location1.jpg"
+                  alt="location"
+                  width="278"
+                  height="198"
+                />
+                <div class="locations__swiper-slide-content">
+                  <h1 class="locations__swiper-slide-title">Up to</h1>
+                  <p class="locations__swiper-slide-price">
+                    $<span>8,582</span>/wk
+                  </p>
+                </div>
+              </div>
+              <div class="locations__swiper-slide swiper-slide">
+                <img
+                  class="locations__swiper-slide-image"
+                  src="./images/locations/location2.jpg"
+                  alt="location"
+                  width="278"
+                  height="198"
+                />
+                <div class="locations__swiper-slide-content">
+                  <h1 class="locations__swiper-slide-title">Up to</h1>
+                  <p class="locations__swiper-slide-price">
+                    $<span>8,007</span>/wk
+                  </p>
+                </div>
+              </div>
+              <div class="locations__swiper-slide swiper-slide">
+                <img
+                  class="locations__swiper-slide-image"
+                  src="./images/locations/location3.jpg"
+                  alt="location"
+                  width="278"
+                  height="198"
+                />
+                <div class="locations__swiper-slide-content">
+                  <h1 class="locations__swiper-slide-title">Up to</h1>
+                  <p class="locations__swiper-slide-price">
+                    $<span>7,442</span>/wk
+                  </p>
+                </div>
+              </div>
+              <div class="locations__swiper-slide swiper-slide">
+                <img
+                  class="locations__swiper-slide-image"
+                  src="./images/locations/location4.jpg"
+                  alt="location"
+                  width="278"
+                  height="198"
+                />
+                <div class="locations__swiper-slide-content">
+                  <h1 class="locations__swiper-slide-title">Up to</h1>
+                  <p class="locations__swiper-slide-price">
+                    $<span>7,442</span>/wk
+                  </p>
+                </div>
+              </div>
+              <div class="locations__swiper-slide swiper-slide">
+                <img
+                  class="locations__swiper-slide-image"
+                  src="./images/locations/location5.jpg"
+                  alt="location"
+                  width="278"
+                  height="198"
+                />
+                <div class="locations__swiper-slide-content">
+                  <h1 class="locations__swiper-slide-title">Up to</h1>
+                  <p class="locations__swiper-slide-price">
+                    $<span>7,442</span>/wk
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="locations__swiper-navigation-buttons">
+            <div class="locations__swiper-button-prev swiper-button-prev"></div>
+            <div class="locations__swiper-button-next swiper-button-next"></div>
+          </div>
+          <button class="locations__button button button--red" type="button">
+            <span class="button__text-wrapper">
+              More Locations
+              <div class="button__arrow-right"></div>
+            </span>
+          </button>
+        </div>
+      </section>
     </main>
 
     <footer></footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="./scripts/main.js"></script>
   </body>
 </html>
