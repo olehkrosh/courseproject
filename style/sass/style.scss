@@ -32,7 +32,7 @@
 }
 
 @mixin mobile {
-    @media (max-width: 768px) {
+    @media (max-width: 767px) {
         @content;
     }
 }
@@ -93,6 +93,7 @@ button {
 
 .container {
     max-width: 1280px;
+    padding-inline: 24px;
     margin-inline: auto;
 }
 
@@ -159,6 +160,7 @@ button {
 
 .header {
     padding-block: 0;
+
     @include mobile {
         padding-bottom: 15px;
     }
@@ -189,6 +191,10 @@ button {
         margin-right: auto;
         margin-left: 62px;
 
+        @include tablet {
+            margin-left: 16px;
+        }
+
         @include mobile {
             flex-direction: column;
             margin-left: auto;
@@ -196,10 +202,21 @@ button {
         }
     }
 
+    &__item {
+        @include tablet {
+            font-size: 14px;
+            text-align: center;
+        }
+    }
+
     &__link {
         font-size: 15px;
         font-weight: inherit;
         position: relative;
+
+        @include tablet {
+            font-size: 14px;
+        }
 
         @include hover {
             color: var(--second-color-hover);
@@ -211,12 +228,8 @@ button {
 
         &.drop-down-triangle::after {
             content: "";
-            position: absolute;
-            top: 70%;
-            left: 105%;
-            width: 0;
-            height: 0;
-            translate: 0 -70%;
+            position: relative;
+            top: 15px;
             border-left: 11px solid transparent; 
             border-right: 11px solid transparent; 
             border-top: 11px solid var(--black-color);
@@ -224,8 +237,9 @@ button {
         }
     }
 
-    &__buttons-wrapper {
+    &__actions {
         display: flex;
+        align-items: center;
         column-gap: 24px;
 
         @include mobile {
@@ -234,15 +248,28 @@ button {
         }
     }
 
+    &__action-link {
+        font-size: 14px;
+        color: var(--second-color);
+        text-align: center;
+        padding-inline: 18px;
+        padding-block: 10px;
+        border-radius: 4px;
+
+        @include hover {
+            color: var(--white-color);
+            background-color: var(--accent-color);
+        }
+    }
+
     &__button {
         padding-inline: 18px;
+        padding-block: 10px;
         border-radius: 4px;
-        margin-block: 14px;
 
         @include mobile {
             align-self: center;
             margin-block: 0px;
-            padding-block: 10px;
         }
     }
 }
