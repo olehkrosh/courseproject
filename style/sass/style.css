@@ -697,13 +697,13 @@ h4 {
 }
 .opportunities__content-swiper-pagination .swiper-pagination-bullet {
   border-radius: 0 !important;
-  background-color: #EDE19B !important;
+  background-color: #ede19b !important;
   opacity: 1 !important;
   width: 10px !important;
   height: 10px !important;
 }
 .opportunities__content-swiper-pagination .swiper-pagination-bullet-active {
-  background-color: #D6A834 !important;
+  background-color: #d6a834 !important;
 }
 .opportunities__content-swiper-button-prev, .opportunities__content-swiper-button-next {
   position: relative !important;
@@ -717,4 +717,96 @@ h4 {
 .opportunities__content-swiper-button-prev::after, .opportunities__content-swiper-button-next::after {
   font-size: 24px !important;
   font-weight: bold !important;
+}
+
+.marketplace {
+  background-color: var(--second-dark-color);
+  padding-block: 0;
+}
+.marketplace__wrapper {
+  display: flex;
+  padding-inline: 0;
+  margin-inline: 0;
+  max-width: none;
+}
+@media (max-width: 767px) {
+  .marketplace__wrapper {
+    flex-direction: column;
+  }
+}
+.marketplace__content {
+  align-self: center;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+@media (max-width: 1023px) {
+  .marketplace__content {
+    padding: 20px;
+  }
+}
+.marketplace__title {
+  font-size: 40px;
+  font-weight: 700;
+  color: var(--white-color);
+  margin-bottom: 39px;
+  max-width: 462px;
+}
+@media (max-width: 1023px) {
+  .marketplace__title {
+    font-size: 32px;
+  }
+}
+@media (max-width: 767px) {
+  .marketplace__title {
+    text-align: center;
+  }
+}
+.marketplace__description {
+  font-size: 20px;
+  color: var(--white-color);
+  margin-bottom: 62px;
+  max-width: 471px;
+}
+@media (max-width: 1023px) {
+  .marketplace__description {
+    font-size: 18px;
+  }
+}
+@media (max-width: 767px) {
+  .marketplace__description {
+    text-align: center;
+  }
+}
+.marketplace__image {
+  flex: 0 0 50%;
+  width: 50%;
+  height: 50%;
+}
+@media (max-width: 767px) {
+  .marketplace__image {
+    width: 100%;
+    height: 100%;
+  }
+}
+.marketplace__list {
+  display: flex;
+  -moz-column-gap: 32px;
+       column-gap: 32px;
+}
+@media (max-width: 767px) {
+  .marketplace__list {
+    justify-content: space-evenly;
+    -moz-column-gap: 0px;
+         column-gap: 0px;
+  }
+}
+.marketplace__item {
+  background-color: var(--white-color);
+  border: 1px solid var(--black-color);
+  border-radius: 4px;
+}
+.marketplace__link-image {
+  padding: 9px 13px;
 }/*# sourceMappingURL=style.css.map */
