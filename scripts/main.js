@@ -58,6 +58,22 @@ function healthcare_swiper() {
   });
 }
 
+function opportunities_swiper() {
+  const swiper = new Swiper(".opportunities__content-swiper", {
+    slidesPerView: 1,
+
+    pagination: {
+      el: ".opportunities__content-swiper-pagination",
+    },
+
+    navigation: {
+      nextEl: ".opportunities__content-swiper-button-next",
+      prevEl: ".opportunities__content-swiper-button-prev",
+    },
+  });
+}
+
 locations_swiper();
 locations_button_toggle();
 healthcare_swiper();
+opportunities_swiper();
