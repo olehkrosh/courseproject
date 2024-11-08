@@ -855,6 +855,7 @@ h4 {
 }
 
 .news {
+    padding-block: 100px;
 
     &__title {
         font-size: 43px;
@@ -872,6 +873,40 @@ h4 {
         &-slide-image {
             width: 100%;
             height: 100%;
+        }
+    }
+}
+
+.sign-up-banner {
+    background-color: var(--second-dark-color);
+    padding-block: 100px;
+
+    &__title-first {
+        font-size: 39px;
+        font-weight: 700;
+        text-align: center;
+        color: var(--white-color);
+    }
+
+    &__title-second {
+        font-size: 44px;
+        font-weight: 700;
+        text-align: center;
+        margin-bottom: 63px;
+        color: var(--white-color);
+    }
+
+    &__button {
+        padding-left: 20px;
+        padding-right: 36px;
+        display: block;
+        margin-inline: auto;
+
+        .button__arrow-right {
+            &::after,
+            &::before {
+                right: -25%;
+            }
         }
     }
 }
