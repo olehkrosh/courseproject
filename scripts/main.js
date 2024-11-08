@@ -73,7 +73,28 @@ function opportunities_swiper() {
   });
 }
 
+function news_swiper() {
+  const swiper = new Swiper(".news__swiper", {
+    spaceBetween: 73,
+
+    breakpoints: {
+      320: {
+        slidesPerView: 2,
+      },
+
+      700: {
+        slidesPerView: 4,
+      },
+
+      1024: {
+        slidesPerView: 6,
+      },
+    },
+  });
+}
+
 locations_swiper();
 locations_button_toggle();
 healthcare_swiper();
 opportunities_swiper();
+news_swiper();

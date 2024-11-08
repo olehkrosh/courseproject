@@ -809,4 +809,18 @@ h4 {
 }
 .marketplace__link-image {
   padding: 9px 13px;
+}
+
+.news__title {
+  font-size: 43px;
+  font-weight: 700;
+  margin-bottom: 80px;
+  text-align: center;
+}
+.news__swiper-wrapper {
+  align-items: center;
+}
+.news__swiper-slide-image {
+  width: 100%;
+  height: 100%;
 }/*# sourceMappingURL=style.css.map */
