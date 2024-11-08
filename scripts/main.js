@@ -38,5 +38,26 @@ function locations_swiper() {
   });
 }
 
+function healthcare_swiper() {
+  const swiper = new Swiper(".healthcare__swiper", {
+    breakpoints: {
+      320: {
+        slidesPerView: 1,
+      },
+
+      700: {
+        slidesPerView: 2,
+        spaceBetween: 52,
+      },
+
+      1024: {
+        slidesPerView: 3,
+        spaceBetween: 104,
+      },
+    },
+  });
+}
+
 locations_swiper();
 locations_button_toggle();
+healthcare_swiper();
