@@ -882,7 +882,7 @@ h4 {
   display: flex;
   max-width: 800px;
   margin-inline: auto;
-  background-color: #F0EDF5;
+  background-color: #f0edf5;
   border-radius: 15984px;
   margin-bottom: 56px;
 }
@@ -923,4 +923,154 @@ h4 {
 }
 .healthcare-jobs__jobs-list {
   margin-left: 16px;
+}
+
+.footer {
+  background-color: var(--white-light-color);
+  padding-block: 65px;
+}
+.footer__logo-link {
+  position: relative;
+  left: -26px;
+  top: 15px;
+}
+@media (max-width: 767px) {
+  .footer__logo-link {
+    display: flex;
+    justify-content: center;
+  }
+}
+@media (max-width: 1023px) {
+  .footer__logo-link {
+    top: 0;
+    left: 0;
+  }
+}
+.footer__content {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 120px;
+}
+@media (max-width: 767px) {
+  .footer__content {
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 40px;
+  }
+}
+.footer__contact {
+  margin-top: 65px;
+}
+@media (max-width: 767px) {
+  .footer__contact {
+    margin-block: 30px;
+  }
+}
+.footer__contact-list {
+  display: flex;
+  flex-direction: column;
+  row-gap: 5px;
+}
+@media (max-width: 767px) {
+  .footer__contact-list {
+    align-items: center;
+  }
+}
+.footer__template-information {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+@media (max-width: 767px) {
+  .footer__template-information {
+    flex-direction: column;
+  }
+}
+.footer__services {
+  display: flex;
+}
+@media (max-width: 767px) {
+  .footer__services {
+    margin-bottom: 15px;
+  }
+}
+.footer__services-link {
+  background-color: var(--default-color);
+  color: var(--white-light-color);
+  border-radius: 4px;
+  padding-left: 34px;
+  padding-right: 12px;
+  padding-block: 2.5px;
+  font-size: 12px;
+}
+.footer__services-link:first-child {
+  margin-right: 13px;
+}
+@media (hover: hover) {
+  .footer__services-link:hover {
+    background-color: var(--accent-color-hover);
+    color: var(--black-color);
+  }
+}
+@media (hover: none) {
+  .footer__services-link:active {
+    background-color: var(--accent-color-hover);
+    color: var(--black-color);
+  }
+}
+.footer__privacy-text:nth-child(1) {
+  margin-right: 46px;
+}
+@media (max-width: 767px) {
+  .footer__privacy-text:nth-child(1) {
+    margin-right: 0px;
+    text-align: center;
+  }
+}
+.footer__privacy-text:nth-child(1), .footer__privacy-text:nth-child(2) {
+  display: inline;
+  font-size: 14px;
+  text-align: center;
+}
+.footer__privacy-text:nth-child(3) {
+  font-size: 12px;
+  text-align: center;
+}
+@media (max-width: 767px) {
+  .footer__candidates, .footer__employers, .footer__company {
+    margin-bottom: 30px;
+  }
+}
+.footer__candidates-title, .footer__employers-title, .footer__company-title {
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 16px;
+}
+@media (max-width: 767px) {
+  .footer__candidates-title, .footer__employers-title, .footer__company-title {
+    text-align: center;
+  }
+}
+.footer__candidates-list, .footer__employers-list, .footer__company-list {
+  display: flex;
+  flex-direction: column;
+  row-gap: 15px;
+}
+@media (max-width: 767px) {
+  .footer__candidates-list, .footer__employers-list, .footer__company-list {
+    align-items: center;
+  }
+}
+.footer__candidates-link, .footer__employers-link, .footer__company-link {
+  font-size: 15px;
+}
+@media (hover: hover) {
+  .footer__contact-link:hover, .footer__candidates-link:hover, .footer__employers-link:hover, .footer__company-link:hover {
+    color: var(--second-color-hover);
+  }
+}
+@media (hover: none) {
+  .footer__contact-link:active, .footer__candidates-link:active, .footer__employers-link:active, .footer__company-link:active {
+    color: var(--second-color-hover);
+  }
 }/*# sourceMappingURL=style.css.map */
