@@ -539,21 +539,14 @@ h4 {
   color: var(--default-color);
   text-align: center;
 }
-.locations__swiper-button-prev {
-  top: 0% !important;
-  left: 0% !important;
-}
-.locations__swiper-button-next {
-  top: 0% !important;
-  right: 0% !important;
-}
 .locations__swiper-navigation-buttons {
   display: flex;
   align-items: center;
   justify-content: center;
   position: relative;
   top: -175px;
-  gap: 350px;
+  -moz-column-gap: 35%;
+       column-gap: 35%;
   margin-bottom: 80px;
 }
 @media (max-width: 767px) {
