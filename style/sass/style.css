@@ -853,4 +853,74 @@ h4 {
 }
 .sign-up-banner__button .button__arrow-right::after, .sign-up-banner__button .button__arrow-right::before {
   right: -25%;
+}
+
+.healthcare-jobs__title {
+  font-size: 44px;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 80px;
+}
+@media (max-width: 767px) {
+  .healthcare-jobs__title {
+    margin-bottom: 40px;
+  }
+}
+.healthcare-jobs__toggle {
+  width: 100%;
+  border-radius: 15984px;
+  padding-block: 8px;
+}
+@media (max-width: 767px) {
+  .healthcare-jobs__toggle {
+    font-size: 14px;
+    padding-inline: 6px;
+    flex: 1 0 50%;
+  }
+}
+.healthcare-jobs__toggle-wrapper {
+  display: flex;
+  max-width: 800px;
+  margin-inline: auto;
+  background-color: #F0EDF5;
+  border-radius: 15984px;
+  margin-bottom: 56px;
+}
+@media (max-width: 767px) {
+  .healthcare-jobs__toggle-wrapper {
+    flex-wrap: wrap;
+  }
+}
+.healthcare-jobs__list {
+  display: flex;
+  justify-content: space-between;
+}
+@media (max-width: 1023px) {
+  .healthcare-jobs__list {
+    -moz-column-gap: 16px;
+         column-gap: 16px;
+  }
+}
+@media (max-width: 767px) {
+  .healthcare-jobs__list {
+    flex-direction: column;
+    row-gap: 24px;
+  }
+}
+.healthcare-jobs__item {
+  display: flex;
+  flex-direction: column;
+  row-gap: 8px;
+}
+@media (max-width: 767px) {
+  .healthcare-jobs__item {
+    row-gap: 24px;
+  }
+}
+.healthcare-jobs__item-title {
+  font-size: 15px;
+  margin-bottom: 4px;
+}
+.healthcare-jobs__jobs-list {
+  margin-left: 16px;
 }/*# sourceMappingURL=style.css.map */

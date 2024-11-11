@@ -93,8 +93,22 @@ function news_swiper() {
   });
 }
 
+function healthcare_jobs__toggle() {
+  const buttons = document.querySelectorAll(".healthcare-jobs__toggle");
+
+  buttons.forEach((button) => {
+    button.addEventListener("click", () => {
+      if (!button.classList.contains("button--green")) {
+        buttons.forEach((btn) => btn.classList.remove("button--green"));
+        button.classList.add("button--green");
+      }
+    });
+  });
+}
+
 locations_swiper();
 locations_button_toggle();
 healthcare_swiper();
 opportunities_swiper();
 news_swiper();
+healthcare_jobs__toggle();

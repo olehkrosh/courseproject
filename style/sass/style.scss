@@ -910,3 +910,78 @@ h4 {
         }
     }
 }
+
+.healthcare-jobs {
+
+    &__title {
+        font-size: 44px;
+        font-weight: 700;
+        text-align: center;
+        margin-bottom: 80px;
+
+        @include mobile {
+            margin-bottom: 40px;
+        }
+    }
+
+    &__toggle {
+        width: 100%;
+        border-radius: 15984px;
+        padding-block: 8px;
+
+        @include mobile {
+            font-size: 14px;
+            padding-inline: 6px;
+            flex: 1 0 50%;
+        }
+
+        &-wrapper {
+            display: flex;
+            max-width: 800px;
+            margin-inline: auto;
+            background-color: #F0EDF5;
+            border-radius: 15984px;
+            margin-bottom: 56px;
+
+            @include mobile {
+                flex-wrap: wrap;
+            }
+        }
+    }
+
+    &__list {
+        display: flex;
+        justify-content: space-between;
+
+        @include tablet {
+            column-gap: 16px;
+        }
+
+        @include mobile {
+            flex-direction: column;
+            row-gap: 24px;
+        }
+    }
+
+    &__item {
+        display: flex;
+        flex-direction: column;
+        row-gap: 8px;
+
+        @include mobile {
+            row-gap: 24px;
+        }
+
+        &-title {
+            font-size: 15px;
+            margin-bottom: 4px;
+        }
+    }
+
+    &__jobs {
+
+        &-list {
+            margin-left: 16px;
+        }
+    }
+}
