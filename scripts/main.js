@@ -106,9 +106,27 @@ function healthcare_jobs__toggle() {
   });
 }
 
+function feedback_modal() {
+  const refs = {
+    openModalBtns: document.querySelectorAll("[data-feedback-open]"),
+    closeModalBtn: document.querySelector("[data-feedback-close]"),
+    modal: document.querySelector("[data-feedback-modal]"),
+  };
+  
+  const toggleModal = () => {
+    refs.modal.classList.toggle("hidden");
+  };
+
+  refs.openModalBtns.forEach((btn) => {
+    btn.addEventListener("click", toggleModal);
+  });
+  refs.closeModalBtn.addEventListener("click", toggleModal);
+}
+
 locations_swiper();
 locations_button_toggle();
 healthcare_swiper();
 opportunities_swiper();
 news_swiper();
 healthcare_jobs__toggle();
+feedback_modal();
