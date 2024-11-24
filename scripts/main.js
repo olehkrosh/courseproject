@@ -1,3 +1,9 @@
+const dialog = document.getElementById("mobileOverlay");
+
+function closeMobileOverlay() {
+  dialog.close();
+}
+
 function locations_button_toggle() {
   const buttons = document.querySelectorAll(".locations__toggle");
 

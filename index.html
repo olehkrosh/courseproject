@@ -23,7 +23,7 @@
             height="23"
           />
         </a>
-        <ul class="header__list">
+        <ul class="header__list hidden-mobile">
           <li class="header__item">
             <a class="header__link" href="#">Browse Jobs</a>
           </li>
@@ -37,9 +37,28 @@
             <a class="header__link drop-down-triangle" href="#">Resources</a>
           </li>
         </ul>
-        <div class="header__actions">
+        <button
+          type="button"
+          class="header__menu visible-mobile"
+          onclick="mobileOverlay.showModal()"
+        >
+          <svg
+            class="header__menu-icon"
+            width="48"
+            height="48"
+            fill="currentColor"
+          >
+            <use href="./images/svg/icons.svg#icon-menu" />
+          </svg>
+          <span class="visually-hidden">Open navigator menu</span>
+        </button>
+        <div class="header__actions hidden-mobile">
           <a class="header__action-link" href="#"> Log In </a>
-          <button class="header__button button button--green" type="button" data-feedback-open>
+          <button
+            class="header__button button button--green"
+            type="button"
+            data-feedback-open
+          >
             Join Vivian
           </button>
         </div>
@@ -615,12 +634,12 @@
       <div class="footer__wrapper container">
         <a class="footer__logo-link" href="#">
           <img
-          class="footer__logo"
-          src="./images/footer-logo.png"
-          alt="logo"
-          width="24"
-          height="24"
-        />
+            class="footer__logo"
+            src="./images/footer-logo.png"
+            alt="logo"
+            width="24"
+            height="24"
+          />
         </a>
         <div class="footer__content">
           <div class="footer__contact">
@@ -719,17 +738,35 @@
           type="button"
           data-feedback-close
         ></button>
-        <h2 class="feedback-modal__title">
-          Leave your feedback
-        </h2>
-        <form action="/" id="feedback-form" class="feedback-modal__form modal-form">
+        <h2 class="feedback-modal__title">Leave your feedback</h2>
+        <form
+          action="/"
+          id="feedback-form"
+          class="feedback-modal__form modal-form"
+        >
           <div class="feedback-modal__input-wrapper">
-            <label class="feedback-modal__label" for="feedback-name">Name</label>
-            <input class="feedback-modal__input" type="text" id="feedback-name" placeholder="enter name" required/>
+            <label class="feedback-modal__label" for="feedback-name"
+              >Name</label
+            >
+            <input
+              class="feedback-modal__input"
+              type="text"
+              id="feedback-name"
+              placeholder="enter name"
+              required
+            />
           </div>
           <div class="feedback-modal__input-wrapper">
-            <label class="feedback-modal__label" for="feedback-mail">Email</label>
-            <input class="feedback-modal__input" type="email" id="feedback-mail" placeholder="enter email" required/>
+            <label class="feedback-modal__label" for="feedback-mail"
+              >Email</label
+            >
+            <input
+              class="feedback-modal__input"
+              type="email"
+              id="feedback-mail"
+              placeholder="enter email"
+              required
+            />
           </div>
           <div class="feedback-modal__textarea-wrapper">
             <label class="feedback-modal__label" for="feedback-comment"
@@ -748,6 +785,78 @@
         </form>
       </div>
     </div>
+
+    <dialog class="mobile-overlay visible-mobile" id="mobileOverlay">
+      <form class="mobile-overlay__form" method="dialog">
+        <button class="mobile-overlay__button-close" type="submit">
+          <svg
+            class="mobile-overlay__icon-close"
+            width="48"
+            height="48"
+            fill="currentColor"
+          >
+            <use href="./images/svg/icons.svg#icon-close" />
+          </svg>
+          <span class="visually-hidden">Close navigation menu</span>
+        </button>
+      </form>
+      <div class="mobile-overlay__body">
+        <ul class="mobile-overlay__list">
+          <li class="mobile-overlay__item">
+            <a
+              class="mobile-overlay__link"
+              href="#"
+              onclick="closeMobileOverlay()"
+              >Browse Jobs</a
+            >
+          </li>
+          <li class="mobile-overlay__item">
+            <a
+              class="mobile-overlay__link"
+              href="#"
+              onclick="closeMobileOverlay()"
+              >Locations</a
+            >
+          </li>
+          <li class="mobile-overlay__item">
+            <a
+              class="mobile-overlay__link"
+              href="#"
+              onclick="closeMobileOverlay()"
+              >For Employers</a
+            >
+          </li>
+          <li class="mobile-overlay__item">
+            <a
+              class="mobile-overlay__link"
+              href="#"
+              onclick="closeMobileOverlay()"
+              >Resources</a
+            >
+          </li>
+          <li class="mobile-overlay__item">
+            <div class="mobile-overlay__actions">
+              <a
+                class="mobile-overlay__action-link"
+                href="#"
+                onclick="closeMobileOverlay()"
+              >
+                Log In
+              </a>
+              <button
+                class="mobile-overlay__button button button--green"
+                type="button"
+                data-feedback-open
+                onclick="closeMobileOverlay()"
+              >
+                Join Vivian
+              </button>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </dialog>
+
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="./scripts/main.js"></script>
   </body>
